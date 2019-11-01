@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="js/data.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
+	</head>
+	<body>
+
+	<nav> 
+		<ul>
+			<li v-for="list in lists">
+				<a v-bind:href="list.urlPath">{{ list.name }}</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>哈哈哈</main>
+	<aside id='recentSean'>{{title}}</aside>
+	<aside id='otherSean'>{{title}}</aside>
+
+	<script>
+	new Vue({
+		el: '#recentSean',
+		data: {
+			title: '最近瀏覽過的商品',
+		}
+	})
+	
+	new Vue({
+		el: '#otherSean',
+		data: {
+			title: '看過此商品的人也看過',
+		}
+	})
+	
+	new Vue({
+		el: 'nav',
+		data: {
+			lists: lists
+		},
+	})
+	
+	
+	</script>
+	</body>
+</html>
