@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
+		<script>
+			var productId = "123"
+		</script>
+		<script src="js/data.js"></script>
+	</head>
+	<body>
+		<nav> 
+			<ul>
+				<li v-for="list in lists">
+					<a v-bind:href="list.urlPath">{{ list.name }}</a>
+				</li>
+			</ul>
+		</nav>
+
+		<main>
+			
+		</main>
+		<aside id='recentSean'>{{title}}
+			<div v-html='html'></div>
+		</aside>
+		<aside id='otherSean'>{{title}}</aside>
+		
+		<script src="js/product.js"></script>
+	</body>
+</html>
